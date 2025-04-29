@@ -32,26 +32,4 @@ public class OrderEventConsumer {
             throw new RuntimeException("Error processing customer event", e);
         }
     }
-
-    // @KafkaListener(topics = "editcustomer_events", groupId = "order_group")
-    // public void handleEditCustomerEvent(String customer) {
-    //     JsonUtils jsonUtils = new JsonUtils();
-    //     Customer receiveEditCustomer = jsonUtils.fromJson(customer, Customer.class);
-    //     customerService.save(receiveEditCustomer);
-    // }
-
-
-    // @KafkaListener(topics = "findcustomerbyid_events", groupId = "order_group")
-    // public Customer handleFindCustomerByIDEvent(String customer) {
-    //     Customer customerReceived = customerService.findById(customer);
-    //     System.out.println("Customers received: " + customerReceived);
-    //     return customerReceived;
-    // }
-
-
-    // @KafkaListener(topics = "findallcustomers_events", groupId = "order_group")
-    // public List<Customer> handleFindAllCustomers() {
-    //     List<Customer> customersReceived = customerService.findAll();
-    //     return customersReceived;
-    // }
 }
